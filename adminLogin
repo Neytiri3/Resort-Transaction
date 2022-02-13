@@ -1,0 +1,70 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
+
+public class adminLogin {
+
+	private JFrame frame;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					adminLogin window = new adminLogin();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public adminLogin() {
+		initialize();
+	}
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setResizable(false);
+		frame.setBounds(100, 100, 502, 346);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblLogin = new JLabel("LOG IN");
+		lblLogin.setBounds(148, 33, 191, 55);
+		lblLogin.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLogin.setFont(new Font("Verdana", Font.BOLD, 25));
+		frame.getContentPane().add(lblLogin);
+		
+		JLabel lblNewLabel = new JLabel("Employee No.");
+		lblNewLabel.setBounds(25, 130, 163, 29);
+		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+		frame.getContentPane().add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setBounds(159, 130, 268, 29);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JButton btnNewButton = new JButton("ENTER");
+		btnNewButton.setBounds(189, 199, 126, 34);
+		btnNewButton.setFont(new Font("Verdana", Font.BOLD, 16));
+		frame.getContentPane().add(btnNewButton);
+	}
+}
